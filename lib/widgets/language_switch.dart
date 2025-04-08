@@ -14,7 +14,7 @@ class LanguageSwitch extends StatelessWidget {
       itemBuilder: (context) {
         return [
           PopupMenuItem(
-            child: Text("English"),
+            child: PopupLanguageSwitchItem(language: "English", icon: icon),
           ),
           PopupMenuItem(
             child: Text("Spanish"),
