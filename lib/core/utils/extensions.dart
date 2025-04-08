@@ -55,4 +55,6 @@ extension StyledContext on BuildContext {
 
   AppLocalizations get texts =>
       AppLocalizations.of(this) ?? lookupAppLocalizations(const Locale("en"));
+
+  ColorScheme get colorScheme => theme.colorScheme;
 }

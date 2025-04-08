@@ -2,6 +2,6 @@
   "dart.flutterSdkPath": ".fvm/versions/3.29.2",
   "flutterTools.displayGetxContextMenu": false,
   "flutterTools.displayMobxContextMenu": false,
-  "flutterTools.displayRiverpodContextMenu": false,
+  "flutterTools.displayRiverpodContextMenu": true,
   "flutterTools.displayModularContextMenu": false
 }

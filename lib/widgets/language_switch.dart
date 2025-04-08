@@ -1,33 +1,67 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/core/utils/app_icon.dart';
 import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
+import 'package:flutter_portfolio_website/providers/app_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
-class LanguageSwitch extends StatelessWidget {
+class LanguageSwitch extends ConsumerWidget {
   const LanguageSwitch({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return PopupMenuButton(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(appLocaleProvider);
+
+    return PopupMenuButton<int>(
       tooltip: "Change Language",
-      // child: Icon(Icons.),
+      initialValue: locale.value == "en" ? 0 : 1,
+      onSelected: (value) {
+        if (value == 0) {
+          // set locale to English
+          ref.read(appLocaleProvider.notifier).changeLocale("en");
+        } else {
+          // set locale to Spanish
+          ref.read(appLocaleProvider.notifier).changeLocale("es");
+        }
+      },
       itemBuilder: (context) {
         return [
           PopupMenuItem(
-            child: PopupLanguageSwitchItem(language: "English", icon: icon),
+            value: 0,
+            child:
+                PopupLanguageSwitchItem(language: "English", icon: AppIcon.us),
           ),
           PopupMenuItem(
-            child: Text("Spanish"),
+            value: 1,
+            child:
+                PopupLanguageSwitchItem(language: "Español", icon: AppIcon.es),
           ),
         ];
       },
+      child: Row(
+        children: [
+          Icon(
+            Icons.language,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
+          const SizedBox(width: 4),
+          SEOText(
+            locale.value == "es" ? "Es" : "En",
+          ),
+          const SizedBox(width: 4),
+        ],
+      ),
     );
   }
 }
 
 class PopupLanguageSwitchItem extends StatelessWidget {
-  const PopupLanguageSwitchItem(
-      {super.key, required this.language, required this.icon});
+  const PopupLanguageSwitchItem({
+    super.key,
+    required this.language,
+    required this.icon,
+  });
 
   final String language;
   final String icon;

@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_portfolio_website/core/theme/app_theme.dart';
+import 'package:flutter_portfolio_website/providers/app_provider.dart';
 import 'package:flutter_portfolio_website/views/home/home.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final locale = ref.watch(appLocaleProvider);
     return MaterialApp(
       title: 'Gideon | Dart',
       debugShowCheckedModeBanner: false,
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
         Locale('en'), // English
         Locale('es'), // Spanish
       ],
-      // locale: Locale("es"),
+      locale: Locale(locale.value ?? "en"),
       home: Scaffold(
         body: Home(),
       ),

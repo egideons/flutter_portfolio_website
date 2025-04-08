@@ -3,6 +3,7 @@ import 'package:flutter_portfolio_website/core/utils/app_menu_list.dart';
 import 'package:flutter_portfolio_website/core/utils/app_size.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/widgets/app_bar_drawer_icon.dart';
+import 'package:flutter_portfolio_website/widgets/language_switch.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
@@ -23,7 +24,7 @@ class MyAppBar extends StatelessWidget {
             Spacer(),
             if (context.isDesktop) LargeAppBarMenu(),
             Spacer(),
-            LanguageToggle(),
+            LanguageSwitch(),
             ThemeToggle(),
             if (!context.isDesktop) AppBarDrawerIcon(),
           ],

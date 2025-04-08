@@ -15,12 +15,17 @@ dependencies:
     sdk: flutter
   intl: any
   gap:
+  riverpod: ^2.6.1
+  flutter_riverpod: ^2.6.1
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
   flutter_launcher_icons: ^0.14.3
+  custom_lint: ^0.7.5
+  riverpod_lint: ^2.6.5
 
 flutter_launcher_icons:
   web:
