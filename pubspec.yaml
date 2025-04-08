@@ -11,6 +11,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_spinkit:
   flutter_svg:
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  gap:
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +31,7 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/

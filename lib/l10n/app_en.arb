@@ -1,0 +1,23 @@
+{
+    "@@locale": "en",
+    "home": "Home",
+    "@home": {
+        "description": "Label for the Home screen or tab."
+    },
+    "aboutMe": "About Me",
+    "@aboutMe": {
+        "description": "Label for the About Me or tab."
+    },
+    "skills": "Skills",
+    "@skills": {
+        "description": "Label for the Skills screen or tab."
+    },
+    "portfolio": "Portfolio",
+    "@portfolio": {
+        "description": "Label for the Portfolio screen or tab."
+    },
+    "contactMe": "Contact Me",
+    "@contactMe": {
+        "description": "Label for the Contact Me screen or tab."
+    }
+}

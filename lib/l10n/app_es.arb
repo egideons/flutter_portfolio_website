@@ -1,0 +1,23 @@
+{
+    "@@locale": "es",
+    "home": "hogar",
+    "@home": {
+        "description": "Etiqueta para la pantalla o pestaña de inicio."
+    },
+    "aboutMe": "Sobre mí",
+    "@aboutMe": {
+        "description": "Etiqueta para la pantalla o pestaña de Sobre mí."
+    },
+    "skills": "Habilidades",
+    "@skills": {
+        "description": "Etiqueta para la pantalla o pestaña de Habilidades."
+    },
+    "portfolio": "Portafolio",
+    "@portfolio": {
+        "description": "Etiqueta para la pantalla o pestaña de Portafolio."
+    },
+    "contactMe": "Contáctame",
+    "@contactMe": {
+        "description": "Etiqueta para la pantalla o pestaña de Contáctame."
+    }
+}

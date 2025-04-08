@@ -7,8 +7,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(),
-      body: Center(child: Text("Hello World!!")),
+      body: MyAppBar(),
     );
   }
 }
