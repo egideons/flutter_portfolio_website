@@ -4,6 +4,7 @@ import 'package:flutter_portfolio_website/core/utils/app_menu_list.dart';
 import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/widgets/app_bar_drawer_icon.dart';
+import 'package:flutter_portfolio_website/widgets/drawer_menu.dart';
 import 'package:flutter_portfolio_website/widgets/language_switch.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,26 +13,31 @@ class MyAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
-      height: context.insets.appBarHeight,
-      color: context.theme.appBarTheme.backgroundColor,
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: Insets.maxWidth),
-        child: Row(
-          children: [
-            MyLogo(),
-            Spacer(),
-            if (context.isDesktop) LargeAppBarMenu(),
-            Spacer(),
-            LanguageSwitch(),
-            ThemeToggle(),
-            if (!context.isDesktop) AppBarDrawerIcon(),
-          ],
+    return Column(
+      children: [
+        AnimatedContainer(
+          duration: Duration(milliseconds: 200),
+          height: context.insets.appBarHeight,
+          color: context.theme.appBarTheme.backgroundColor,
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: Insets.maxWidth),
+            child: Row(
+              children: [
+                MyLogo(),
+                Spacer(),
+                if (context.isDesktop) LargeAppBarMenu(),
+                Spacer(),
+                LanguageSwitch(),
+                ThemeToggle(),
+                if (!context.isDesktop) AppBarDrawerIcon(),
+              ],
+            ),
+          ),
         ),
-      ),
+        if (!context.isDesktop) DrawerMenu(),
+      ],
     );
   }
 }
@@ -59,6 +65,25 @@ class LargeAppBarMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: AppMenuList.getItems(context)
+          .map(
+            (e) => LargeAppBarMenuItem(
+              text: e.title,
+              isSelected: true,
+              onTap: () {},
+            ),
+          )
+          .toList(),
+    );
+  }
+}
+
+class SmallAppBarMenu extends StatelessWidget {
+  const SmallAppBarMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
       children: AppMenuList.getItems(context)
           .map(
             (e) => LargeAppBarMenuItem(
