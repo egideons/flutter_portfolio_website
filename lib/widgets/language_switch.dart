@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/controllers/app_locale_controller.dart';
 import 'package:flutter_portfolio_website/core/utils/app_icon.dart';
 import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
-import 'package:flutter_portfolio_website/providers/app_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -11,7 +11,7 @@ class LanguageSwitch extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final locale = ref.watch(appLocaleProvider);
+    final locale = ref.watch(appLocaleControllerProvider);
 
     return PopupMenuButton<int>(
       tooltip: "Change Language",
@@ -19,10 +19,10 @@ class LanguageSwitch extends ConsumerWidget {
       onSelected: (value) {
         if (value == 0) {
           // set locale to English
-          ref.read(appLocaleProvider.notifier).changeLocale("en");
+          ref.read(appLocaleControllerProvider.notifier).changeLocale("en");
         } else {
           // set locale to Spanish
-          ref.read(appLocaleProvider.notifier).changeLocale("es");
+          ref.read(appLocaleControllerProvider.notifier).changeLocale("es");
         }
       },
       itemBuilder: (context) {
