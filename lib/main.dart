@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_portfolio_website/controllers/app_locale_controller.dart';
+import 'package:flutter_portfolio_website/controllers/app_theme_controller.dart';
 import 'package:flutter_portfolio_website/core/theme/app_theme.dart';
 import 'package:flutter_portfolio_website/views/home/home.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,12 +18,13 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final locale = ref.watch(appLocaleControllerProvider);
+    final theme = ref.watch(appThemeControllerProvider);
     return MaterialApp(
       title: 'Gideon | Dart',
       debugShowCheckedModeBanner: false,
       theme: AppTheme(fontFamily: _fontFamily(locale.value)).light,
       darkTheme: AppTheme(fontFamily: _fontFamily(locale.value)).dark,
-      themeMode: ThemeMode.dark,
+      themeMode: theme.value,
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

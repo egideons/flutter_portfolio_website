@@ -7,12 +7,12 @@ part of 'app_theme_controller.dart';
 // **************************************************************************
 
 String _$appThemeControllerHash() =>
-    r'eda19cebf8b0e94ae5dcf076e9c3698b5d0a739c';
+    r'644c93657f6d0e6355a33954d4aeaa5b84fdc4e6';
 
 /// See also [AppThemeController].
 @ProviderFor(AppThemeController)
 final appThemeControllerProvider =
-    AutoDisposeNotifierProvider<AppThemeController, Object?>.internal(
+    AutoDisposeAsyncNotifierProvider<AppThemeController, ThemeMode>.internal(
   AppThemeController.new,
   name: r'appThemeControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -22,6 +22,6 @@ final appThemeControllerProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$AppThemeController = AutoDisposeNotifier<Object?>;
+typedef _$AppThemeController = AutoDisposeAsyncNotifier<ThemeMode>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

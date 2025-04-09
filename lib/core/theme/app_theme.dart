@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/theme/app_colors.dart';
-import 'package:flutter_portfolio_website/core/utils/app_size.dart';
+import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 
 class AppTheme {
   final String fontFamily;
