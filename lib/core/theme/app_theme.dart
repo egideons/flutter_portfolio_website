@@ -1,11 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first, deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/theme/app_colors.dart';
 import 'package:flutter_portfolio_website/core/utils/app_size.dart';
 
 class AppTheme {
+  final String fontFamily;
+  AppTheme({
+    required this.fontFamily,
+  });
+
   ThemeData get dark {
-    return ThemeData(
-      useMaterial3: true,
+    return _getThemeData(
       colorScheme: ColorScheme.dark(
         primary: AppColors.primaryColor,
         surface: AppColors.darkBackgroundColor,
@@ -17,16 +22,15 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: AppColors.darkBackgroundColor,
       elevatedButtonTheme:
-          ElevatedButtonThemeData(style: _darkElevatedButtonStyle),
+          ElevatedButtonThemeData(style: _darkElevatedButtonStyle(fontFamily)),
       outlinedButtonTheme:
-          OutlinedButtonThemeData(style: _darkOutlinedButtonStyle),
+          OutlinedButtonThemeData(style: _darkOutlinedButtonStyle(fontFamily)),
       appBarTheme: AppBarTheme(color: AppColors.gray[900]!.withOpacity(.3)),
     );
   }
 
   ThemeData get light {
-    return ThemeData(
-      useMaterial3: true,
+    return _getThemeData(
       colorScheme: ColorScheme.light(
         primary: AppColors.primaryColor,
         surface: AppColors.gray[200]!,
@@ -38,24 +42,24 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: AppColors.gray[100]!,
       elevatedButtonTheme:
-          ElevatedButtonThemeData(style: _lightElevatedButtonStyle),
+          ElevatedButtonThemeData(style: _lightElevatedButtonStyle(fontFamily)),
       outlinedButtonTheme:
-          OutlinedButtonThemeData(style: _lightOutlinedButtonStyle),
+          OutlinedButtonThemeData(style: _lightOutlinedButtonStyle(fontFamily)),
       appBarTheme: AppBarTheme(color: AppColors.gray[100]!.withOpacity(.3)),
     );
   }
 
   ThemeData _getThemeData({
     required ColorScheme colorScheme,
-    required WidgetStateProperty<TextStyle> elevatedButtonTextStyle,
-    required WidgetStateProperty<TextStyle> outlinedButtonTextStyle,
+    required ElevatedButtonThemeData elevatedButtonTheme,
+    required OutlinedButtonThemeData outlinedButtonTheme,
     required Color scaffoldBackgroundColor,
     required AppBarTheme appBarTheme,
   }) {
     return ThemeData(
       colorScheme: colorScheme,
       useMaterial3: true,
-      // fontFamily: fontFamily,
+      fontFamily: fontFamily,
       scaffoldBackgroundColor: scaffoldBackgroundColor,
       appBarTheme: appBarTheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -66,7 +70,6 @@ class AppTheme {
             horizontal: Insets.xl,
             vertical: 10,
           )),
-          textStyle: elevatedButtonTextStyle,
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -79,7 +82,6 @@ class AppTheme {
               vertical: 10,
             ),
           ),
-          textStyle: outlinedButtonTextStyle,
         ),
       ),
     );
@@ -100,75 +102,104 @@ class AppTheme {
           states.contains(WidgetState.pressed)) {
         return BorderSide(
           color: const Color(0xFF561895).withOpacity(.7),
-          width: 2,
-          style: BorderStyle.solid,
         );
       }
       return BorderSide(
-        color: AppColors.primaryColor,
-        width: 2,
-        style: BorderStyle.solid,
+        color: const Color(0xFF561895).withOpacity(.7),
       );
     },
   );
 
-  final _lightElevatedButtonStyle = ButtonStyle(
-    backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
-    alignment: Alignment.center,
-    elevation: WidgetStatePropertyAll(20),
-    enableFeedback: true,
-    overlayColor: WidgetStatePropertyAll(AppColors.gray[300]!),
-    animationDuration: Duration(milliseconds: 400),
-    mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
-      return SystemMouseCursors.click;
-    }),
-    padding: WidgetStatePropertyAll(
-      EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
-    ),
-    // textStyle:
-  );
-  final _darkElevatedButtonStyle = ButtonStyle(
-    backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
-    alignment: Alignment.center,
-    elevation: WidgetStatePropertyAll(20),
-    enableFeedback: true,
-    overlayColor: WidgetStatePropertyAll(AppColors.gray[800]!),
-    animationDuration: Duration(milliseconds: 400),
-    mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
-      return SystemMouseCursors.click;
-    }),
-    padding: WidgetStatePropertyAll(
-      EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
-    ),
-    // textStyle:
-  );
+  ButtonStyle _darkElevatedButtonStyle(String fontFamily) => ButtonStyle(
+        backgroundColor:
+            WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
+        alignment: Alignment.center,
+        elevation: WidgetStatePropertyAll(20),
+        textStyle: WidgetStatePropertyAll(
+          TextStyle(
+            color: AppColors.gray[100],
+            fontFamily: fontFamily,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        enableFeedback: true,
+        overlayColor: WidgetStatePropertyAll(AppColors.gray[800]!),
+        animationDuration: Duration(milliseconds: 400),
+        mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
+          return SystemMouseCursors.click;
+        }),
+        padding: WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
+        ),
+        // textStyle:
+      );
 
-  final _lightOutlinedButtonStyle = ButtonStyle(
-    // backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
-    alignment: Alignment.center,
-    elevation: WidgetStatePropertyAll(20),
-    enableFeedback: true,
-    animationDuration: Duration(milliseconds: 400),
-    mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
-      return SystemMouseCursors.click;
-    }),
-    padding: WidgetStatePropertyAll(
-      EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
-    ),
-    // textStyle:
-  );
-  final _darkOutlinedButtonStyle = ButtonStyle(
-    // backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
-    alignment: Alignment.center,
-    elevation: WidgetStatePropertyAll(20),
-    enableFeedback: true,
-    animationDuration: Duration(milliseconds: 400),
-    mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
-      return SystemMouseCursors.click;
-    }),
-    padding: WidgetStatePropertyAll(
-      EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
-    ),
-    // textStyle:
-  );
+  ButtonStyle _darkOutlinedButtonStyle(String fontFamily) => ButtonStyle(
+        // backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
+        alignment: Alignment.center,
+        elevation: WidgetStatePropertyAll(20),
+        enableFeedback: true,
+        animationDuration: Duration(milliseconds: 400),
+        textStyle: WidgetStatePropertyAll(
+          TextStyle(
+            color: AppColors.gray[100],
+            fontFamily: fontFamily,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+
+        mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
+          return SystemMouseCursors.click;
+        }),
+        padding: WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
+        ),
+        // textStyle:
+      );
+
+  ButtonStyle _lightElevatedButtonStyle(String fontFamily) => ButtonStyle(
+        backgroundColor:
+            WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
+        alignment: Alignment.center,
+        elevation: WidgetStatePropertyAll(20),
+        enableFeedback: true,
+        textStyle: WidgetStatePropertyAll(
+          TextStyle(
+            color: AppColors.gray[100],
+            fontFamily: fontFamily,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        overlayColor: WidgetStatePropertyAll(AppColors.gray[300]!),
+        animationDuration: Duration(milliseconds: 400),
+        mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
+          return SystemMouseCursors.click;
+        }),
+        padding: WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
+        ),
+        // textStyle:
+      );
+
+  ButtonStyle _lightOutlinedButtonStyle(String fontFamily) => ButtonStyle(
+        // backgroundColor: WidgetStatePropertyAll(Color(0xFF561895).withOpacity(.7)),
+        alignment: Alignment.center,
+        elevation: WidgetStatePropertyAll(20),
+        enableFeedback: true,
+        animationDuration: Duration(milliseconds: 400),
+        textStyle: WidgetStatePropertyAll(
+          TextStyle(
+            color: AppColors.gray[800],
+            fontFamily: fontFamily,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        mouseCursor: WidgetStateMouseCursor.resolveWith((states) {
+          return SystemMouseCursors.click;
+        }),
+        padding: WidgetStatePropertyAll(
+          EdgeInsets.symmetric(horizontal: Insets.med, vertical: 4),
+        ),
+        // textStyle:
+      );
 }
