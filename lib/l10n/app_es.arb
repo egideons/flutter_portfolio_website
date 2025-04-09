@@ -1,5 +1,9 @@
 {
     "@@locale": "es",
+    "egideonchuks": "egideonchuks",
+    "@egideonchuks": {
+        "description": "Nombre de usuario"
+    },
     "home": "hogar",
     "@home": {
         "description": "Etiqueta para la pantalla o pestaña de inicio."

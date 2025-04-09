@@ -52,7 +52,7 @@ class MyLogo extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       mouseCursor: SystemMouseCursors.click,
       child: Text(
-        "Portfolio",
+        context.texts.egideonchuks,
         style: context.textStyle.titleLgBold,
       ),
     );

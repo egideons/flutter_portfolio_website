@@ -1,5 +1,9 @@
 {
     "@@locale": "en",
+    "egideonchuks": "egideonchuks",
+    "@egideonchuks": {
+        "description": "User name"
+    },
     "home": "Home",
     "@home": {
         "description": "Label for the Home screen or tab."
@@ -19,5 +23,13 @@
     "contactMe": "Contact Me",
     "@contactMe": {
         "description": "Label for the Contact Me screen or tab."
+    },
+    "mobileAppDeveloper": "Mobile App Developer",
+    "@mobileAppDeveloper": {
+        "description": "Label for Profession"
+    },
+    "mobileAppDeveloperDesc": "I am a highly skilled and motivated Flutter Developer with 5 years of experience in building dynamic and efficient mobile applications. I am Proficient in Dart programming language and the Flutter framework, I bring a passion for creating visually appealing and user-friendly interfaces.\nMy expertise in cross-platform development and agile methodologies allows me to deliver top-notch mobile experiences that meet clients' expectations and drive business results.",
+    "@mobileAppDeveloperDesc": {
+        "description": "Label for Profession description"
     }
 }
