@@ -54,6 +54,7 @@ flutter:
         - asset: fonts/poppins/Poppins-Black.ttf
         - asset: fonts/poppins/Poppins-BlackItalic.ttf
         - asset: fonts/poppins/Poppins-Bold.ttf
+          weight: 700
         - asset: fonts/poppins/Poppins-BoldItalic.ttf
         - asset: fonts/poppins/Poppins-ExtraBold.ttf
         - asset: fonts/poppins/Poppins-ExtraBoldItalic.ttf
@@ -63,10 +64,32 @@ flutter:
         - asset: fonts/poppins/Poppins-Light.ttf
         - asset: fonts/poppins/Poppins-LightItalic.ttf
         - asset: fonts/poppins/Poppins-Medium.ttf
+          weight: 500
         - asset: fonts/poppins/Poppins-MediumItalic.ttf
         - asset: fonts/poppins/Poppins-Regular.ttf
         - asset: fonts/poppins/Poppins-SemiBold.ttf
         - asset: fonts/poppins/Poppins-SemiBoldItalic.ttf
         - asset: fonts/poppins/Poppins-Thin.ttf
         - asset: fonts/poppins/Poppins-ThinItalic.ttf
+    - family: Montserrat
+      fonts:
+        - asset: fonts/montserrat/Montserrat-Black.ttf
+        - asset: fonts/montserrat/Montserrat-BlackItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Bold.ttf
           weight: 700
+        - asset: fonts/montserrat/Montserrat-BoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraBold.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraLight.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraLightItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Italic.ttf
+        - asset: fonts/montserrat/Montserrat-Light.ttf
+        - asset: fonts/montserrat/Montserrat-LightItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: fonts/montserrat/Montserrat-MediumItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Regular.ttf
+        - asset: fonts/montserrat/Montserrat-SemiBold.ttf
+        - asset: fonts/montserrat/Montserrat-SemiBoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Thin.ttf
+        - asset: fonts/montserrat/Montserrat-ThinItalic.ttf

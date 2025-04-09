@@ -20,7 +20,8 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Gideon | Dart',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(fontFamily: ).dark,
+      theme: AppTheme(fontFamily: _fontFamily(locale.value)).light,
+      darkTheme: AppTheme(fontFamily: _fontFamily(locale.value)).dark,
       themeMode: ThemeMode.dark,
       localizationsDelegates: [
         AppLocalizations.delegate,
@@ -37,5 +38,9 @@ class MyApp extends ConsumerWidget {
         body: Home(),
       ),
     );
+  }
+
+  String _fontFamily(String? locale) {
+    return (locale ?? "en") == "en" ? "Poppins" : "Montserrat";
   }
 }
