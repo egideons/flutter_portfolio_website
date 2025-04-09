@@ -24,7 +24,7 @@ class MyApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme(fontFamily: _fontFamily(locale.value)).light,
       darkTheme: AppTheme(fontFamily: _fontFamily(locale.value)).dark,
-      themeMode: theme.value,
+      themeMode: theme.value ?? ThemeMode.system,
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

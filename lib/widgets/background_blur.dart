@@ -11,7 +11,7 @@ class BackgroundBlur extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: -(context.width / 2 / 2),
-      right: (-(context.width / 2 / 2)) + Insets.xxxl,
+      top: (-(context.width / 2 / 2)) + Insets.xxxl,
       child: Container(
         width: context.width / 2,
         height: context.height / 2,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/widgets/background_blur.dart';
 import 'package:flutter_portfolio_website/widgets/my_app_bar.dart';
 
 class Home extends StatelessWidget {
@@ -7,7 +8,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MyAppBar(),
+      body: Stack(
+        children: [
+          BackgroundBlur(),
+          MyAppBar(),
+        ],
+      ),
     );
   }
 }
