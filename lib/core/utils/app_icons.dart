@@ -1,4 +1,4 @@
-class AppIcon {
+class AppIcons {
   static const String _icons = "assets/icons";
 
   static String us = "$_icons/us.svg";

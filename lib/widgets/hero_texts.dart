@@ -16,7 +16,7 @@ class HeroTexts extends StatelessWidget {
           : CrossAxisAlignment.center,
       children: [
         SEOText(
-          context.texts.egideonchuks,
+          context.texts.myFullName,
           textAlign:
               context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
           textStyle: context.textStyle.titleLgBold.copyWith(

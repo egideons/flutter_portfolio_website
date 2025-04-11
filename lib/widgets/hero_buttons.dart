@@ -12,11 +12,13 @@ class LargeHeroButtons extends StatelessWidget {
     return Row(
       children: [
         PrimaryButton(
-          title: context.texts.courses,
+          onPressed: () {},
+          title: context.texts.downloadResume,
         ),
         Gap(Insets.lg),
         OutlineButton(
-          title: context.texts.cooperationRequest,
+          onPressed: () {},
+          title: context.texts.contactMe,
         ),
       ],
     );
@@ -33,14 +35,16 @@ class SmallHeroButtons extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: PrimaryButton(
-            title: context.texts.courses,
+            onPressed: () {},
+            title: context.texts.downloadResume,
           ),
         ),
         Gap(Insets.lg),
         SizedBox(
           width: double.infinity,
           child: OutlineButton(
-            title: context.texts.cooperationRequest,
+            onPressed: () {},
+            title: context.texts.contactMe,
           ),
         ),
       ],

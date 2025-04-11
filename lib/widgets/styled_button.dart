@@ -5,12 +5,14 @@ import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
-  const PrimaryButton({super.key, required this.title});
+  final VoidCallback onPressed;
+  const PrimaryButton(
+      {super.key, required this.title, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         title,
         style: TextStyle(
@@ -24,12 +26,15 @@ class PrimaryButton extends StatelessWidget {
 
 class OutlineButton extends StatelessWidget {
   final String title;
-  const OutlineButton({super.key, required this.title});
+  final VoidCallback onPressed;
+
+  const OutlineButton(
+      {super.key, required this.title, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
+    return OutlinedButton(
+      onPressed: onPressed,
       child: SEOText(
         title,
         textStyle: TextStyle(

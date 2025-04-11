@@ -1,27 +1,47 @@
 {
     "@@locale": "es",
+    "myFullName": "Gideon Chukwuoma Chimemerie",
+    "@myFullName": {
+        "description": "Etiqueta para mi nombre completo"
+    },
     "egideonchuks": "egideonchuks",
     "@egideonchuks": {
-        "description": "Nombre de usuario"
+        "description": "Etiqueta para mi nombre de usuario"
     },
-    "home": "hogar",
-    "@home": {
-        "description": "Etiqueta para la pantalla o pestaña de inicio."
-    },
-    "aboutMe": "Sobre mí",
+    "aboutMe": "Sobre Mí",
     "@aboutMe": {
-        "description": "Etiqueta para la pantalla o pestaña de Sobre mí."
+        "description": "Etiqueta para la pestaña o sección Sobre Mí."
     },
     "skills": "Habilidades",
     "@skills": {
-        "description": "Etiqueta para la pantalla o pestaña de Habilidades."
+        "description": "Etiqueta para la pestaña o sección de Habilidades."
+    },
+    "services": "Servicios",
+    "@services": {
+        "description": "Etiqueta para la pestaña o sección de Servicios."
     },
     "portfolio": "Portafolio",
     "@portfolio": {
-        "description": "Etiqueta para la pantalla o pestaña de Portafolio."
+        "description": "Etiqueta para la pestaña o sección de Portafolio."
     },
     "contactMe": "Contáctame",
     "@contactMe": {
-        "description": "Etiqueta para la pantalla o pestaña de Contáctame."
+        "description": "Etiqueta para la pestaña, botón o sección de Contáctame."
+    },
+    "mobileAppDeveloper": "Desarrollador de Aplicaciones Móviles",
+    "@mobileAppDeveloper": {
+        "description": "Etiqueta para Profesión"
+    },
+    "mobileAppDeveloperDesc": "Soy un desarrollador móvil altamente capacitado y motivado con 5 años de experiencia en la creación de aplicaciones móviles dinámicas y eficientes. Domino el lenguaje de programación Dart y el framework Flutter, y tengo una gran pasión por crear interfaces visualmente atractivas y fáciles de usar.\nMi experiencia en desarrollo multiplataforma y metodologías ágiles me permite ofrecer experiencias móviles de alta calidad que cumplen con las expectativas del cliente y generan resultados comerciales.",
+    "@mobileAppDeveloperDesc": {
+        "description": "Etiqueta para la descripción de la profesión"
+    },
+    "downloadResume": "Descargar Currículum",
+    "@downloadResume": {
+        "description": "Etiqueta para el botón de Descargar Currículum"
+    },
+    "poweredByFlutter": "Desarrollado con Flutter",
+    "@poweredByFlutter": {
+        "description": "Etiqueta para el texto 'Desarrollado con Flutter'"
     }
 }

@@ -1,12 +1,12 @@
 {
     "@@locale": "en",
+    "myFullName": "Gideon Chukwuoma Chimemerie",
+    "@myFullName": {
+        "description": "Label for my full name"
+    },
     "egideonchuks": "egideonchuks",
     "@egideonchuks": {
-        "description": "User name"
-    },
-    "home": "Home",
-    "@home": {
-        "description": "Label for the Home screen or tab."
+        "description": "Label for my user name"
     },
     "aboutMe": "About Me",
     "@aboutMe": {
@@ -16,20 +16,32 @@
     "@skills": {
         "description": "Label for the Skills screen or tab."
     },
+    "services": "Services",
+    "@services": {
+        "description": "Label for the Services screen or tab."
+    },
     "portfolio": "Portfolio",
     "@portfolio": {
         "description": "Label for the Portfolio screen or tab."
     },
     "contactMe": "Contact Me",
     "@contactMe": {
-        "description": "Label for the Contact Me screen or tab."
+        "description": "Label for the Contact Me screen, button or tab."
     },
-    "mobileAppDeveloper": "Mobile App Developer",
+    "mobileAppDeveloper": "Mobile Application Developer",
     "@mobileAppDeveloper": {
         "description": "Label for Profession"
     },
-    "mobileAppDeveloperDesc": "I am a highly skilled and motivated Flutter Developer with 5 years of experience in building dynamic and efficient mobile applications. I am Proficient in Dart programming language and the Flutter framework, I bring a passion for creating visually appealing and user-friendly interfaces.\nMy expertise in cross-platform development and agile methodologies allows me to deliver top-notch mobile experiences that meet clients' expectations and drive business results.",
+    "mobileAppDeveloperDesc": "I am a highly skilled and motivated Mobile Developer with 5 years of experience in building dynamic and efficient mobile applications. I am Proficient in Dart programming language and the Flutter framework, I bring a passion for creating visually appealing and user-friendly interfaces.\nMy expertise in cross-platform development and agile methodologies allows me to deliver top-notch mobile experiences that meet clients' expectations and drive business results.",
     "@mobileAppDeveloperDesc": {
         "description": "Label for Profession description"
+    },
+    "downloadResume": "Download Resume",
+    "@downloadResume": {
+        "description": "Label for the Download Resume button"
+    },
+    "poweredByFlutter": "Powered By Flutter",
+    "@poweredByFlutter": {
+        "description": "Label for the 'Powered by Flutter' text"
     }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/controllers/app_locale_controller.dart';
-import 'package:flutter_portfolio_website/core/utils/app_icon.dart';
+import 'package:flutter_portfolio_website/core/utils/app_icons.dart';
 import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,12 +30,12 @@ class LanguageSwitch extends ConsumerWidget {
           PopupMenuItem(
             value: 0,
             child:
-                PopupLanguageSwitchItem(language: "English", icon: AppIcon.us),
+                PopupLanguageSwitchItem(language: "English", icon: AppIcons.us),
           ),
           PopupMenuItem(
             value: 1,
             child:
-                PopupLanguageSwitchItem(language: "Español", icon: AppIcon.es),
+                PopupLanguageSwitchItem(language: "Español", icon: AppIcons.es),
           ),
         ];
       },
