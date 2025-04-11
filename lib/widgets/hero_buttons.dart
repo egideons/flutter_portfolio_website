@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/controllers/url_launch_controller.dart';
 import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/widgets/styled_button.dart';
 import 'package:gap/gap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LargeHeroButtons extends StatelessWidget {
   const LargeHeroButtons({super.key});
@@ -12,7 +14,12 @@ class LargeHeroButtons extends StatelessWidget {
     return Row(
       children: [
         PrimaryButton(
-          onPressed: () {},
+          onPressed: () {
+            UrlLaunchController.launchWeb(
+              "https://drive.google.com/drive/folders/1AFYtDx-oMHkBQkNeGzMCxN-Alr5nLJd8",
+              LaunchMode.platformDefault,
+            );
+          },
           title: context.texts.downloadResume,
         ),
         Gap(Insets.lg),

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/utils/app_images.dart';
 import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
@@ -32,7 +33,7 @@ class HeroWidget extends StatelessWidget {
               ),
               Text(context.texts.poweredByFlutter),
             ],
-          ),
+          ).fadeInDownBig(curve: Curves.easeIn),
           10.toHeight,
           context.isDesktopOrTablet ? _LargeHero() : _SmallHero(),
         ],
@@ -50,12 +51,12 @@ class _SmallHero extends StatelessWidget {
       children: [
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 140),
-          child: HeroImage(),
+          child: HeroImage().fadeInDownBig(curve: Curves.easeIn),
         ),
         Gap(Insets.xl),
-        HeroTexts(),
+        HeroTexts().fadeInUpBig(curve: Curves.easeIn),
         Gap(Insets.xxl),
-        SmallHeroButtons(),
+        SmallHeroButtons().fadeInUpBig(curve: Curves.easeIn),
       ],
     );
   }
@@ -68,7 +69,7 @@ class _LargeHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: HeroImage()),
+        Expanded(child: HeroImage().fadeInLeft(curve: Curves.easeIn)),
         Gap(Insets.xxxl),
         Expanded(
           flex: 2,
@@ -78,7 +79,7 @@ class _LargeHero extends StatelessWidget {
               Gap(Insets.xxl),
               LargeHeroButtons(),
             ],
-          ),
+          ).fadeInRight(curve: Curves.easeIn),
         ),
       ],
     );

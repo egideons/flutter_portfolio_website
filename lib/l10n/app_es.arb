@@ -32,8 +32,8 @@
     "@mobileAppDeveloper": {
         "description": "Etiqueta para Profesión"
     },
-    "mobileAppDeveloperDesc": "Soy un desarrollador móvil altamente capacitado y motivado con 5 años de experiencia en la creación de aplicaciones móviles dinámicas y eficientes. Domino el lenguaje de programación Dart y el framework Flutter, y tengo una gran pasión por crear interfaces visualmente atractivas y fáciles de usar.\nMi experiencia en desarrollo multiplataforma y metodologías ágiles me permite ofrecer experiencias móviles de alta calidad que cumplen con las expectativas del cliente y generan resultados comerciales.",
-    "@mobileAppDeveloperDesc": {
+    "professionalSummary": "Soy un desarrollador móvil altamente capacitado y motivado con 5 años de experiencia en la creación de aplicaciones móviles dinámicas y eficientes. Domino el lenguaje de programación Dart y el framework Flutter, y tengo una gran pasión por crear interfaces visualmente atractivas y fáciles de usar.\nMi experiencia en desarrollo multiplataforma y metodologías ágiles me permite ofrecer experiencias móviles de alta calidad que cumplen con las expectativas del cliente y generan resultados comerciales.",
+    "@professionalSummary": {
         "description": "Etiqueta para la descripción de la profesión"
     },
     "downloadResume": "Descargar Currículum",

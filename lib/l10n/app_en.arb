@@ -28,13 +28,25 @@
     "@contactMe": {
         "description": "Label for the Contact Me screen, button or tab."
     },
+    "leader": "Leader",
+    "@leader": {
+        "description": "Label for leader"
+    },
     "mobileAppDeveloper": "Mobile Application Developer",
     "@mobileAppDeveloper": {
-        "description": "Label for Profession"
+        "description": "Label for Mobile Application Developer"
     },
-    "mobileAppDeveloperDesc": "I am a highly skilled and motivated Mobile Developer with 5 years of experience in building dynamic and efficient mobile applications. I am Proficient in Dart programming language and the Flutter framework, I bring a passion for creating visually appealing and user-friendly interfaces.\nMy expertise in cross-platform development and agile methodologies allows me to deliver top-notch mobile experiences that meet clients' expectations and drive business results.",
-    "@mobileAppDeveloperDesc": {
-        "description": "Label for Profession description"
+    "frontendWebDeveloper": "Frontend Web Developer",
+    "@frontendWebDeveloper": {
+        "description": "Label for Frontend Web Developer"
+    },
+    "graphicDesigner": "Graphic Designer",
+    "@graphicDesigner": {
+        "description": "Label for Graphic Designer"
+    },
+    "professionalSummary": "A strong team player and team leader, I am always eager to collaborate with designers, product managers, and stakeholders to bring innovative ideas to life. Analytical Software Developer with experience in software design and development. Practised at aligning user needs with design and operating within time and budget constraints.\nI am a highly skilled and motivated Mobile Developer and Frontend Web Developer with 5 years of experience in building dynamic and efficient mobile applications. I am Proficient in Dart programming language and the Flutter framework, I bring a passion for creating visually appealing and user-friendly interfaces.\nMy expertise in cross-platform development and agile methodologies allows me to deliver top-notch mobile experiences that meet clients' expectations and drive business results.",
+    "@professionalSummary": {
+        "description": "Label for Professional Summary"
     },
     "downloadResume": "Download Resume",
     "@downloadResume": {
