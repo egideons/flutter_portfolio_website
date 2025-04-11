@@ -12,8 +12,12 @@ class Home extends StatelessWidget {
       body: Stack(
         children: [
           BackgroundBlur(),
-          HeroWidget(),
-          MyAppBar(),
+          ListView(
+            children: [
+              MyAppBar(),
+              HeroWidget(),
+            ],
+          ),
         ],
       ),
     );

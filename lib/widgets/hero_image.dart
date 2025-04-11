@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/utils/app_images.dart';
+import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 
 class HeroImage extends StatelessWidget {
   const HeroImage({super.key});
@@ -7,7 +8,7 @@ class HeroImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: .6,
+      aspectRatio: context.isTablet ? .7 : .9,
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(250)),
         child: Image.asset(AppImages.me, fit: BoxFit.cover),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/core/utils/app_images.dart';
 import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 import 'package:flutter_portfolio_website/core/utils/constants.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
@@ -13,11 +14,25 @@ class HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          EdgeInsets.symmetric(vertical: Insets.xxxl, horizontal: Insets.lg),
+      padding: EdgeInsets.symmetric(horizontal: Insets.med),
       child: Column(
         children: [
-          Text(context.texts.poweredByFlutter),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(250)),
+                child: Image.asset(
+                  AppImages.flutter,
+                  height: 32,
+                  width: 32,
+                  fit: BoxFit.contain,
+                ),
+              ),
+              Text(context.texts.poweredByFlutter),
+            ],
+          ),
           10.toHeight,
           context.isDesktopOrTablet ? _LargeHero() : _SmallHero(),
         ],

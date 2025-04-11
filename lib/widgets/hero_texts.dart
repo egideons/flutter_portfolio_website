@@ -39,7 +39,7 @@ class HeroTexts extends StatelessWidget {
           context.texts.mobileAppDeveloperDesc,
           textAlign:
               context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
-          textStyle: context.textStyle.titleMdMedium.copyWith(
+          textStyle: context.textStyle.bodyLgMedium.copyWith(
             color: context.colorScheme.onSurface,
           ),
           textRendererStyle: TextRendererStyle.header2,
