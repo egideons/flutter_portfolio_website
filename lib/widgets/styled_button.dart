@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/theme/app_colors.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
-import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
@@ -35,9 +34,9 @@ class OutlineButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlinedButton(
       onPressed: onPressed,
-      child: SEOText(
+      child: Text(
         title,
-        textStyle: TextStyle(
+        style: TextStyle(
           color: context.colorScheme.onSurface,
           fontWeight: FontWeight.w500,
         ),

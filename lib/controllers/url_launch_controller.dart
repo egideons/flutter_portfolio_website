@@ -1,34 +1,34 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
-// Conditional import
-import 'package:flutter_portfolio_website/core/utils/web_helper_stub.dart'
-    if (dart.library.html) 'web_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLaunchController {
   static Future<void> launchWeb(
-    String url,
-    LaunchMode launchMode, {
+    String url, {
     String? headerKey,
     String? headerValue,
   }) async {
+    final uri = Uri.parse(url);
+
     if (kIsWeb) {
-      openUrlInNewTab(url); // Now calls the correct implementation
-    } else {
-      final uri = Uri.parse(url);
-      final canLaunch = await canLaunchUrl(uri);
-      if (!canLaunch) {
+      if (!await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      )) {
         throw Exception('Could not launch $url');
       }
-
-      await launchUrl(
+    } else {
+      // Other platforms
+      if (!await launchUrl(
         uri,
-        mode: launchMode,
+        mode: LaunchMode.platformDefault,
         webViewConfiguration: WebViewConfiguration(
           headers: headerKey != null && headerValue != null
               ? <String, String>{headerKey: headerValue}
               : const {},
         ),
-      );
+      )) {
+        throw Exception('Could not launch $url');
+      }
     }
   }
 

@@ -4,7 +4,6 @@ import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/widgets/styled_button.dart';
 import 'package:gap/gap.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class LargeHeroButtons extends StatelessWidget {
   const LargeHeroButtons({super.key});
@@ -17,14 +16,15 @@ class LargeHeroButtons extends StatelessWidget {
           onPressed: () {
             UrlLaunchController.launchWeb(
               "https://drive.google.com/drive/folders/1AFYtDx-oMHkBQkNeGzMCxN-Alr5nLJd8",
-              LaunchMode.platformDefault,
             );
           },
           title: context.texts.downloadResume,
         ),
         Gap(Insets.lg),
         OutlineButton(
-          onPressed: () {},
+          onPressed: () {
+            UrlLaunchController.sendMail("gideon.dart@gmail.com");
+          },
           title: context.texts.contactMe,
         ),
       ],
@@ -42,7 +42,11 @@ class SmallHeroButtons extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: PrimaryButton(
-            onPressed: () {},
+            onPressed: () {
+              UrlLaunchController.launchWeb(
+                "https://drive.google.com/drive/folders/1AFYtDx-oMHkBQkNeGzMCxN-Alr5nLJd8",
+              );
+            },
             title: context.texts.downloadResume,
           ),
         ),
@@ -50,7 +54,9 @@ class SmallHeroButtons extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: OutlineButton(
-            onPressed: () {},
+            onPressed: () {
+              UrlLaunchController.sendMail("gideon.dart@gmail.com");
+            },
             title: context.texts.contactMe,
           ),
         ),

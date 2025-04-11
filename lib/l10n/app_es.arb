@@ -8,33 +8,45 @@
     "@egideonchuks": {
         "description": "Etiqueta para mi nombre de usuario"
     },
-    "aboutMe": "Sobre Mí",
+    "aboutMe": "Sobre mí",
     "@aboutMe": {
-        "description": "Etiqueta para la pestaña o sección Sobre Mí."
+        "description": "Etiqueta para la pestaña de Sobre mí"
     },
     "skills": "Habilidades",
     "@skills": {
-        "description": "Etiqueta para la pestaña o sección de Habilidades."
+        "description": "Etiqueta para la pestaña de Habilidades"
     },
     "services": "Servicios",
     "@services": {
-        "description": "Etiqueta para la pestaña o sección de Servicios."
+        "description": "Etiqueta para la pestaña de Servicios"
     },
     "portfolio": "Portafolio",
     "@portfolio": {
-        "description": "Etiqueta para la pestaña o sección de Portafolio."
+        "description": "Etiqueta para la pestaña de Portafolio"
     },
     "contactMe": "Contáctame",
     "@contactMe": {
-        "description": "Etiqueta para la pestaña, botón o sección de Contáctame."
+        "description": "Etiqueta para la pestaña, botón o pantalla de Contáctame"
+    },
+    "leader": "Líder",
+    "@leader": {
+        "description": "Etiqueta para líder"
     },
     "mobileAppDeveloper": "Desarrollador de Aplicaciones Móviles",
     "@mobileAppDeveloper": {
-        "description": "Etiqueta para Profesión"
+        "description": "Etiqueta para Desarrollador de Aplicaciones Móviles"
     },
-    "professionalSummary": "Soy un desarrollador móvil altamente capacitado y motivado con 5 años de experiencia en la creación de aplicaciones móviles dinámicas y eficientes. Domino el lenguaje de programación Dart y el framework Flutter, y tengo una gran pasión por crear interfaces visualmente atractivas y fáciles de usar.\nMi experiencia en desarrollo multiplataforma y metodologías ágiles me permite ofrecer experiencias móviles de alta calidad que cumplen con las expectativas del cliente y generan resultados comerciales.",
+    "frontendWebDeveloper": "Desarrollador Frontend Web",
+    "@frontendWebDeveloper": {
+        "description": "Etiqueta para Desarrollador Frontend Web"
+    },
+    "graphicDesigner": "Diseñador Gráfico",
+    "@graphicDesigner": {
+        "description": "Etiqueta para Diseñador Gráfico"
+    },
+    "professionalSummary": "Soy un fuerte colaborador y líder de equipo, siempre dispuesto a trabajar con diseñadores, gerentes de producto y partes interesadas para dar vida a ideas innovadoras. Soy un Desarrollador de Software analítico con experiencia en diseño y desarrollo de software. Me destaco en alinear las necesidades del usuario con el diseño y operar dentro de los límites de tiempo y presupuesto.\nSoy un desarrollador móvil y frontend altamente capacitado y motivado con 5 años de experiencia en la creación de aplicaciones móviles dinámicas y eficientes. Domino el lenguaje de programación Dart y el framework Flutter, y tengo una gran pasión por crear interfaces visualmente atractivas y fáciles de usar.\nMi experiencia en desarrollo multiplataforma y metodologías ágiles me permite ofrecer experiencias móviles de alta calidad que cumplen con las expectativas del cliente y generan resultados empresariales.",
     "@professionalSummary": {
-        "description": "Etiqueta para la descripción de la profesión"
+        "description": "Etiqueta para Resumen Profesional"
     },
     "downloadResume": "Descargar Currículum",
     "@downloadResume": {

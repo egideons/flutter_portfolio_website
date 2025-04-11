@@ -32,6 +32,10 @@
     "@leader": {
         "description": "Label for leader"
     },
+    "founderEduralabs": "Founder, Eduralabs",
+    "@founderEduralabs": {
+        "description": "Label for Founder, Eduralabs"
+    },
     "mobileAppDeveloper": "Mobile Application Developer",
     "@mobileAppDeveloper": {
         "description": "Label for Mobile Application Developer"
