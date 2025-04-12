@@ -13,7 +13,7 @@ class HeroImage extends StatelessWidget {
         showHeroImageDialog(context);
       },
       child: AspectRatio(
-        aspectRatio: context.isTablet ? .7 : .9,
+        aspectRatio: context.isTablet ? .9 : 1,
         child: ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(250)),
           child: Image.asset(AppImages.me, fit: BoxFit.cover),

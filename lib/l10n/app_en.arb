@@ -4,6 +4,10 @@
     "@myFullName": {
         "description": "Label for my full name"
     },
+    "poweredByFlutter": "Powered By Flutter",
+    "@poweredByFlutter": {
+        "description": "Label for the 'Powered by Flutter' text"
+    },
     "egideonchuks": "egideonchuks",
     "@egideonchuks": {
         "description": "Label for my user name"
@@ -56,8 +60,16 @@
     "@downloadResume": {
         "description": "Label for the Download Resume button"
     },
-    "poweredByFlutter": "Powered By Flutter",
-    "@poweredByFlutter": {
-        "description": "Label for the 'Powered by Flutter' text"
+    "yearsOfWorkExperience": "Years Experience",
+    "@yearsOfWorkExperience": {
+        "description": "Label for Years of Experience"
+    },
+    "projectsWorkedOn": "Projects worked on",
+    "@projectsWorkedOn": {
+        "description": "Label for projects worked on"
+    },
+    "companiesWorkedAt": "Companies worked at",
+    "@companiesWorkedAt": {
+        "description": "Label for companies worked at"
     }
 }

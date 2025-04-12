@@ -28,10 +28,11 @@ class HeroTexts extends StatelessWidget {
         Gap(Insets.sm),
         TypewriteText(
           linesOfText: [
-            context.texts.leader,
-            context.texts.mobileAppDeveloper,
-            context.texts.frontendWebDeveloper,
-            context.texts.graphicDesigner,
+            "${context.texts.leader}.",
+            "${context.texts.founderEduralabs}.",
+            "${context.texts.mobileAppDeveloper}.",
+            "${context.texts.frontendWebDeveloper}.",
+            "${context.texts.graphicDesigner}.",
           ],
           cursorSymbol: "|",
           cursorColor: context.colorScheme.primary,
