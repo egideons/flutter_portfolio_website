@@ -4,6 +4,7 @@ import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/widgets/background_blur.dart';
 import 'package:flutter_portfolio_website/widgets/hero_widget.dart';
 import 'package:flutter_portfolio_website/widgets/my_app_bar.dart';
+import 'package:flutter_portfolio_website/widgets/professions_list.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -55,20 +56,23 @@ class _HomeState extends State<Home> {
           ? FloatingActionButton.small(
               onPressed: scrollToTop,
               backgroundColor: context.colorScheme.primary,
-              foregroundColor: context.colorScheme.surface,
+              foregroundColor: context.colorScheme.inverseSurface,
               child: const Icon(Icons.keyboard_arrow_up),
             ).fadeInUp(curve: Curves.easeInOut)
           : const SizedBox(),
       body: Stack(
         children: [
           BackgroundBlur(),
-          ListView(
+          SingleChildScrollView(
             controller: scrollController,
-            children: [
-              MyAppBar(),
-              HeroWidget(),
-            ],
+            child: Column(
+              children: [
+                HeroWidget(),
+                ProfessionsList(),
+              ],
+            ),
           ),
+          MyAppBar(),
         ],
       ),
     );

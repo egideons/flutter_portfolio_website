@@ -2,7 +2,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_website/core/utils/app_images.dart';
 import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
-import 'package:flutter_portfolio_website/core/utils/constants.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
 import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
 import 'package:flutter_portfolio_website/widgets/hero_buttons.dart';
@@ -17,7 +16,8 @@ class HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: Insets.med),
+      padding:
+          EdgeInsets.symmetric(horizontal: Insets.med, vertical: Insets.xxxl),
       child: Column(
         children: [
           Row(
@@ -33,10 +33,9 @@ class HeroWidget extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
-              Text(context.texts.poweredByFlutter),
+              SEOText(context.texts.poweredByFlutter),
             ],
           ).fadeInDownBig(curve: Curves.easeIn),
-          10.toHeight,
           context.isDesktopOrTablet ? _LargeHero() : _SmallHero(),
         ],
       ),
@@ -89,21 +88,21 @@ class __HeroWorkSummaryState extends State<_HeroWorkSummary> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Expanded(
-          child: rowItem(
+          child: _rowItem(
             controller: _yearsOfWorkExperience,
             hasSuffix: true,
             subtitle: context.texts.yearsOfWorkExperience,
           ),
         ),
         Expanded(
-          child: rowItem(
+          child: _rowItem(
             controller: _projectsWorkedOn,
             hasSuffix: true,
             subtitle: context.texts.projectsWorkedOn,
           ),
         ),
         Expanded(
-          child: rowItem(
+          child: _rowItem(
             controller: _companiesWorkedAt,
             hasSuffix: false,
             subtitle: context.texts.companiesWorkedAt,
@@ -113,7 +112,7 @@ class __HeroWorkSummaryState extends State<_HeroWorkSummary> {
     );
   }
 
-  rowItem({
+  _rowItem({
     SmoothCounterController? controller,
     String? subtitle,
     bool? hasSuffix,
@@ -171,7 +170,7 @@ class _LargeHero extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: HeroImage().fadeInLeft(curve: Curves.easeIn)),
-        Gap(Insets.xxl),
+        Gap(Insets.xl),
         Expanded(
           flex: 2,
           child: Column(

@@ -1,5 +1,9 @@
 {
     "@@locale": "en",
+    "intro": "Hi, I'm",
+    "@intro": {
+        "description": "Label for intro"
+    },
     "myFullName": "Gideon Chukwuoma Chimemerie",
     "@myFullName": {
         "description": "Label for my full name"
