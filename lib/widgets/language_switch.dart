@@ -75,7 +75,7 @@ class PopupLanguageSwitchItem extends StatelessWidget {
           height: 18,
         ),
         const Gap(8),
-        SEOText(language),
+        SEOText(language, isSelectableText: false),
       ],
     );
   }

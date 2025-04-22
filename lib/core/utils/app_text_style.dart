@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppTextStyle {
   TextStyle get titleSmBold;
   TextStyle get bodyMdMedium;
+  TextStyle get titleMdBold;
   TextStyle get titleLgBold;
   TextStyle get titleXLgBold;
   TextStyle get titleXXLgBold;
@@ -53,6 +54,11 @@ class SmallTextStyles extends AppTextStyle {
       );
 
   @override
+  TextStyle get titleMdBold => const TextStyle(
+        fontWeight: FontWeight.w800,
+        fontSize: 24,
+      );
+  @override
   TextStyle get titleSmBold => const TextStyle(
         fontWeight: FontWeight.w800,
         fontSize: 16,
@@ -94,6 +100,11 @@ class LargeTextStyles extends AppTextStyle {
         fontSize: 40,
       );
 
+  @override
+  TextStyle get titleMdBold => const TextStyle(
+        fontWeight: FontWeight.w800,
+        fontSize: 24,
+      );
   @override
   TextStyle get titleMdMedium => const TextStyle(
         fontWeight: FontWeight.w500,

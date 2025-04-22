@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio_website/core/utils/animated_dialog.dart';
 import 'package:flutter_portfolio_website/core/utils/app_images.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
+import 'package:flutter_portfolio_website/widgets/animated_dialog.dart';
 
 class HeroImage extends StatelessWidget {
   const HeroImage({super.key});

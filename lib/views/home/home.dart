@@ -1,10 +1,15 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio_website/core/utils/app_sizing.dart';
 import 'package:flutter_portfolio_website/core/utils/extensions.dart';
+import 'package:flutter_portfolio_website/core/utils/seo_text.dart';
 import 'package:flutter_portfolio_website/widgets/background_blur.dart';
+import 'package:flutter_portfolio_website/widgets/experiences_body.dart';
 import 'package:flutter_portfolio_website/widgets/hero_widget.dart';
 import 'package:flutter_portfolio_website/widgets/my_app_bar.dart';
 import 'package:flutter_portfolio_website/widgets/professions_list.dart';
+import 'package:gap/gap.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -29,13 +34,13 @@ class _HomeState extends State<Home> {
 //================ Scroll Listener =================//
   void _scrollListener() {
     //========= Show action button ========//
-    if (scrollController.position.pixels >= 150) {
+    if (scrollController.position.pixels >= 100) {
       setState(() {
         scrollToTopBtnVisible = true;
       });
     }
     //========= Hide action button ========//
-    else if (scrollController.position.pixels < 150) {
+    else if (scrollController.position.pixels < 100) {
       setState(() {
         scrollToTopBtnVisible = false;
       });
@@ -56,7 +61,7 @@ class _HomeState extends State<Home> {
           ? FloatingActionButton.small(
               onPressed: scrollToTop,
               backgroundColor: context.colorScheme.primary,
-              foregroundColor: context.colorScheme.inverseSurface,
+              foregroundColor: Colors.white,
               child: const Icon(Icons.keyboard_arrow_up),
             ).fadeInUp(curve: Curves.easeInOut)
           : const SizedBox(),
@@ -69,10 +74,26 @@ class _HomeState extends State<Home> {
               children: [
                 HeroWidget(),
                 ProfessionsList(),
+                Gap(Insets.xxxl),
+                SEOText(
+                  context.texts.whatIHaveDoneSoFar.toUpperCase(),
+                  textAlign: TextAlign.center,
+                  isSelectableText: true,
+                  textRendererStyle: TextRendererStyle.header4,
+                  textStyle: context.textStyle.titleMdMedium,
+                ),
+                SEOText(
+                  context.texts.workExperience,
+                  textAlign: TextAlign.center,
+                  isSelectableText: true,
+                  textRendererStyle: TextRendererStyle.header1,
+                  textStyle: context.textStyle.titleXXLgBold,
+                ),
+                ExperiencesBody(),
               ],
             ),
           ),
-          MyAppBar(),
+          MyAppBar(hasScrolledDown: scrollToTopBtnVisible),
         ],
       ),
     );

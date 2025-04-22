@@ -9,16 +9,23 @@ import 'package:flutter_portfolio_website/widgets/language_switch.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MyAppBar extends StatelessWidget {
-  const MyAppBar({super.key});
+  final bool hasScrolledDown;
+  const MyAppBar({super.key, required this.hasScrolledDown});
 
   @override
   Widget build(BuildContext context) {
+    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Column(
       children: [
         AnimatedContainer(
           duration: Duration(milliseconds: 200),
           height: context.insets.appBarHeight,
-          color: context.theme.appBarTheme.backgroundColor,
+          color: hasScrolledDown
+              ? isDarkMode
+                  ? context.theme.primaryColor
+                  : context.theme.scaffoldBackgroundColor
+              : context.theme.appBarTheme.backgroundColor,
           alignment: Alignment.center,
           padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
           child: ConstrainedBox(

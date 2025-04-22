@@ -9,10 +9,10 @@ class SEOText extends StatelessWidget {
     this.textAlign,
     this.textRendererStyle,
     this.maxLines,
-    this.isSelectableText,
+    this.isSelectableText = true,
     this.textOverflow,
   });
-  final bool? isSelectableText;
+  final bool isSelectableText;
   final String text;
   final TextStyle? textStyle;
   final TextAlign? textAlign;
@@ -22,7 +22,7 @@ class SEOText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isSelectableText == true
+    return isSelectableText
         ? SelectableText(
             text,
             style: textStyle,

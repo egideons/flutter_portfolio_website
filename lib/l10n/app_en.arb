@@ -75,5 +75,13 @@
     "companiesWorkedAt": "Companies worked at",
     "@companiesWorkedAt": {
         "description": "Label for companies worked at"
+    },
+    "whatIHaveDoneSoFar": "What I have done so far",
+    "@whatIHaveDoneSoFar": {
+        "description": "Label for What I have done so far"
+    },
+    "workExperience": "Work Experience",
+    "@workExperience": {
+        "description": "Label for Work Experience"
     }
 }

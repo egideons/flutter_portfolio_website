@@ -32,6 +32,8 @@ class _ProfessionCardItemState extends State<ProfessionCardItem> {
     return MouseRegion(
       onEnter: (_) => setState(() => _elevation = 50),
       onExit: (_) => setState(() => _elevation = 0),
+      onHover: (event) => setState(() => _elevation = 50),
+      cursor: SystemMouseCursors.basic,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeIn,
@@ -41,7 +43,7 @@ class _ProfessionCardItemState extends State<ProfessionCardItem> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          border: Border.all(color: primaryColor, width: 1.5),
+          border: Border.all(color: primaryColor, width: 2),
           borderRadius: BorderRadius.circular(12),
           boxShadow: _elevation > 0
               ? [
@@ -62,25 +64,28 @@ class _ProfessionCardItemState extends State<ProfessionCardItem> {
             borderRadius: BorderRadius.circular(12),
           ),
           child: AspectRatio(
-            aspectRatio: 1,
+            aspectRatio: .7,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ClipRRect(
-                  child: Image.asset(
-                    widget.imagePath,
-                    height: 120,
-                    width: 120,
+                AspectRatio(
+                  aspectRatio: 2.8,
+                  child: ClipRRect(
+                    child: Image.asset(
+                      widget.imagePath,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Gap(24),
                 SEOText(
                   widget.title,
                   textAlign: TextAlign.center,
-                  textStyle: context.textStyle.titleMdMedium
+                  textStyle: context.textStyle.titleMdBold
                       .copyWith(color: context.colorScheme.onSurface),
-                  textRendererStyle: TextRendererStyle.header3,
+                  textRendererStyle: TextRendererStyle.header1,
+                  maxLines: 4,
                 ),
               ],
             ),

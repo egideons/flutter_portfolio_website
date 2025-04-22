@@ -9,6 +9,8 @@ class BackgroundBlur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Positioned(
       left: -(context.width / 2 / 2),
       top: (-(context.width / 2 / 2)) + Insets.xxxl,
@@ -21,7 +23,9 @@ class BackgroundBlur extends StatelessWidget {
             BoxShadow(
               blurRadius: 200,
               spreadRadius: 100,
-              color: context.colorScheme.primary.withOpacity(.4),
+              color: isDarkMode
+                  ? context.colorScheme.primary.withOpacity(.4)
+                  : context.colorScheme.primary.withOpacity(.16),
             ),
           ],
         ),

@@ -31,10 +31,7 @@ class MyApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
-        Locale('en'), // English
-        Locale('es'), // Spanish
-      ],
+      supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(locale.value ?? "en"),
       home: Scaffold(
         body: Home(),
